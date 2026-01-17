@@ -188,6 +188,7 @@
       box-sizing: border-box;
       transition: all 0.3s ease;
       margin-bottom: 2rem;
+      text-align: center;
     }
 
     .subscription-bar.collapsed {
@@ -203,11 +204,12 @@
 
     .bar-header {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       margin-bottom: 1rem;
       padding-bottom: 0.5rem;
       border-bottom: 1px solid rgba(255,255,255,0.3);
+      cursor: pointer;
     }
 
     .subscription-bar.collapsed .bar-header {
@@ -267,34 +269,75 @@
       display: none;
     }
 
+    .bar-content {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .subscription-bar.collapsed .bar-content {
+      display: none;
+    }
+
     .bar-content p {
       margin: 0.8rem 0;
+      text-align: center;
     }
 
     .bar-content ul {
-      padding-left: 1.2rem;
-      margin: 0.8rem 0;
+      padding: 0;
+      margin: 0.8rem 0 0.8rem 0; /* Reduce indentation by removing auto horizontal margin */
+      text-align: left;
+      display: table;
+      list-style: none;
+      max-width: fit-content;
     }
 
     .bar-content li {
+      display: table-row;
       margin-bottom: 0.5rem;
+      padding-left: 0; /* Ensure no extra padding */
     }
+
+    .bar-content li:before {
+      content: "•";
+      display: table-cell;
+      padding-right: 0.5rem;
+      vertical-align: top;
+      width: 1em; /* Control the width of the bullet cell */
+    }
+
+    .bar-content li span {
+      display: table-cell;
+      vertical-align: top;
+      text-align: left;
+      padding-left: 0; /* Ensure no extra padding */
+    }
+
+    .bar-content p {
+      margin: 0.5rem 0;
+      text-align: left;
+    }
+
 
     .subscribe-btn {
       display: block;
-      width: 100%;
-      max-width: 200px;
+      width: auto;
+      max-width: none;
       background-color: white;
       color: var(--primary-color);
-      padding: 0.75rem;
+      padding: 0.75rem 1.5rem;
       border-radius: var(--border-radius);
       text-decoration: none;
       font-weight: bold;
       text-align: center;
-      margin-top: 1rem;
+      margin: 1rem auto 1.5rem auto;
       border: none;
       cursor: pointer;
       transition: background-color 0.3s ease;
+      white-space: nowrap;
     }
 
     @media (max-width: 768px) {
@@ -338,6 +381,7 @@
       <button class="toggle-btn" id="toggleBarBtn">−</button>
     </div>
     <div class="bar-content">
+      <a href="contact.html" class="subscribe-btn">Subscribe Now & Claim Your Free Bonus E-Book – Transform their tomorrow, starting today.</a>
       <p><strong>Unlock Your Kid's Brightest Future – Join the Community Now!</strong></p>
       <p>For a limited time only, subscribe today and get our exclusive bonus e-book packed with powerful strategies on emotional mastery, confidence-building, and lifelong coping skills – completely free!</p>
       <p>Become part of a supportive circle that delivers:</p>
@@ -347,8 +391,7 @@
         <li>Game-changing insights to help your teen or tween thrive through big life moments</li>
       </ul>
       <p>Don't miss this chance to equip your teen or tween with the edge they deserve – spots for this bonus are filling fast!</p>
-      <a href="contact.html" class="subscribe-btn">Subscribe Now & Claim Your Free Bonus E-Book – Transform their tomorrow, starting today.</a>
-    </div>
+        </div>
   </div>
 
   <main class="container">
@@ -376,7 +419,7 @@
       <div class="container">
         <div class="feature-grid">
           <div class="feature-text">
-            <h2>Building Resilient Teens</h2>
+            <h2>Building Resilient Kids</h2>
             <p>Your teen/tween's brain is wiring for life. Arm them with reliable methods to navigate stress, forge stronger connections, and come out ready for whatever comes next.</p>
             <p>Frustration builds when emotions run the show. These teen/tween-centered tools flip the script — teaching calm responses, smart choices, and confidence that grows with every read.</p>
           </div>
@@ -421,6 +464,7 @@
           <li><a href="#">Email</a></li>
           <li><a href="#">Instagram</a></li>
           <li><a href="#">Facebook</a></li>
+          <li><a href="#">TikTok</a></li>
         </ul>
         <p>&copy; 2026 Taylor Brookingdale. All rights reserved.</p>
       </div>
@@ -453,7 +497,7 @@
         // Ensure bar starts expanded by default
         bar.classList.remove('collapsed');
         toggleBtn.textContent = '−'; // Show minus sign when expanded
-        barTitle.textContent = 'Join Our Community'; // Show full text when expanded
+        barTitle.textContent = 'Join our Community'; // Show full text when expanded
       }
 
       // Function to handle toggle
@@ -467,12 +511,12 @@
           localStorage.setItem('barCollapsed', 'true');
         } else {
           toggleBtn.textContent = '−'; // Minus sign when expanded
-          barTitle.textContent = 'Join Our Community'; // Full text when expanded
+          barTitle.textContent = 'Join our Community'; // Full text when expanded
           localStorage.setItem('barCollapsed', 'false');
         }
       }
 
-      // Add click listener to the entire bar header
+      // Add click listener to the bar header only (not the content)
       const barHeader = document.querySelector('.bar-header');
       barHeader.addEventListener('click', function(event) {
         // Prevent triggering toggle if clicking on a link or button inside
