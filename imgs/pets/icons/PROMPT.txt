@@ -1,0 +1,3 @@
+$DESC
+
+make it manga/anime style with simple colors and lines so it looks good when resized downwards

@@ -277,6 +277,14 @@ nav a:hover {
   border: 2px solid transparent;
 }
 
+.card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-bottom: calc(var(--spacing-unit) * 0.5);
+}
+
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
