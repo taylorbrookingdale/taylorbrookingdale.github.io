@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>Collections | Paws & Pages</title>
+    <meta
+      name="description"
+      content="Browse our collection of pet training journals, health trackers, and Rainbow Bridge memory books."
+    >
+    <link rel="canonical" href="https://taylorbrookingdale.github.io/collections.html">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      .carousel-section {
+        padding: calc(var(--spacing-unit) * 4) var(--spacing-unit);
+        background: linear-gradient(135deg, var(--verdigris), var(--charcoal-blue));
+        color: white;
+        min-height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .carousel-section h2 {
+        color: white;
+        text-align: center;
+        margin-bottom: calc(var(--spacing-unit) * 2);
+      }
+
+      .carousel-container {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: var(--border-radius);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .carousel-track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .carousel-slide {
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: calc(var(--spacing-unit) * 2);
+        background: var(--card-bg);
+        color: var(--text-color);
+        box-sizing: border-box;
+      }
+
+      .carousel-slide img {
+        max-width: 250px;
+        height: auto;
+        border-radius: var(--border-radius);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        margin-bottom: 1rem;
+      }
+
+      .carousel-slide h3 {
+        margin: 0.5rem 0;
+        color: var(--charcoal-blue);
+      }
+
+      .carousel-slide p {
+        text-align: center;
+        max-width: 500px;
+        margin-bottom: 1rem;
+      }
+
+      .carousel-nav {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .carousel-btn {
+        background: rgba(255, 255, 255, 0.3);
+        border: none;
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 1.2rem;
+        transition: background 0.3s ease;
+      }
+
+      .carousel-btn:hover {
+        background: rgba(255, 255, 255, 0.5);
+      }
+
+      .carousel-dots {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+
+      .carousel-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.4);
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .carousel-dot.active {
+        background: white;
+      }
+
+      .back-link {
+        text-align: center;
+        padding: calc(var(--spacing-unit) * 2) 0;
+      }
+
+      .back-link a {
+        color: var(--charcoal-blue);
+        text-decoration: none;
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+        border-radius: 25px;
+        transition: background-color 0.3s ease;
+      }
+
+      .back-link a:hover {
+        background-color: var(--color-scheme-2-bg);
+        text-decoration: none;
+      }
+
+      .books-table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      .books-table thead th {
+        border-bottom: 2px solid var(--charcoal-blue);
+        padding: 1rem;
+        text-align: left;
+      }
+
+      /* .books-table thead tr:first-child th {
+        border-top: 1px solid var(--charcoal-blue);
+      } */
+
+      .books-table tbody tr {
+        border-bottom: 1px solid #ddd;
+      }
+
+      /* .books-table tbody tr td:first-child {
+        border-left: 1px solid var(--charcoal-blue);
+      } */
+
+      /* .books-table tbody tr td:last-child {
+        border-right: 1px solid var(--charcoal-blue);
+      } */
+
+      .books-table .book-link {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        text-decoration: none;
+        color: var(--charcoal-blue);
+        font-weight: 600;
+      }
+
+      .books-table .book-link:hover {
+        color: var(--verdigris);
+      }
+
+      .books-table .book-title-link {
+        text-decoration: underline;
+        text-decoration-color: var(--verdigris);
+        text-underline-offset: 3px;
+      }
+
+      .books-table .book-link:hover .book-title-link {
+        text-decoration-color: var(--charcoal-blue);
+      }
+
+      .books-table .book-cover {
+        width: 60px;
+        height: auto;
+        border-radius: 4px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      }
+
+      .books-table td {
+        padding: 1rem;
+        vertical-align: middle;
+      }
+
+      @media (max-width: 600px) {
+        .books-table .book-cover {
+          width: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="pets.html">Pets</a></li>
+            <li><a href="journals.html">Journals</a></li>
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="carousel-section">
+      <h2>Our Collections</h2>
+      <p style="text-align: center; color: white; margin-bottom: 1rem">
+        Browse our complete collection on <a
+          href="https://www.amazon.com/author/brookingdale"
+          target="_blank"
+          style="color: white; text-decoration: underline"
+        >Amazon</a>
+      </p>
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <div class="carousel-slide" id="puppy-training">
+            <img src="imgs/books/puppy-training.jpg" alt="Puppy Training Guide">
+            <h3>Puppy Training Guide</h3>
+            <p>
+              A comprehensive guide to raising a well-behaved and happy puppy. Includes training
+              tips, schedules, and behavioral advice.
+            </p>
+            <a href="https://mybook.to/zXIN" target="_blank" class="btn">Get Your Copy</a>
+          </div>
+          <div class="carousel-slide">
+            <img src="imgs/books/australian-shepherd-puppy.jpg" alt="Australian Shepherd Puppy Training Guide">
+            <h3>Australian Shepherd Puppy Training Guide</h3>
+            <p>
+              How to use positive reinforcement methods for essential commands, socialization & energy
+              management to raise a high-energy herding dog.
+            </p>
+            <a href="https://mybook.to/aKXx" target="_blank" class="btn">Get Your Copy</a>
+          </div>
+          <div class="carousel-slide">
+            <img src="imgs/books/dog-logbook.jpg" alt="Dog Training & Health Logbook">
+            <h3>Dog Training & Health Logbook</h3>
+            <p>
+              Track your dog's training progress, health records, and memories in one comprehensive
+              logbook.
+            </p>
+            <a href="https://mybook.to/61hb" target="_blank" class="btn">Get Your Copy</a>
+          </div>
+          <div class="carousel-slide">
+            <img src="imgs/books/cat-logbook.jpg" alt="Cat Training & Health Logbook">
+            <h3>Cat Training & Health Logbook</h3>
+            <p>
+              Keep track of your cat's health, training milestones, and precious moments with this
+              organized logbook.
+            </p>
+            <a href="https://mybook.to/VKAh" target="_blank" class="btn">Get Your Copy</a>
+          </div>
+          <div class="carousel-slide">
+            <img
+              src="imgs/books/horsetracker5.png"
+              alt="Equine Passport & Health Tracker for Horses"
+            >
+            <h3>Equine Passport & Health Tracker for Horses</h3>
+            <p>
+              Keep your horse's health records organized with this comprehensive tracker. Perfect
+              for horse owners and trainers.
+            </p>
+            <a href="https://mybook.to/6T8zOM" target="_blank" class="btn">Get Your Copy</a>
+          </div>
+        </div>
+        <div class="carousel-nav">
+          <button class="carousel-btn" id="prevBtn">&lsaquo;</button>
+          <button class="carousel-btn" id="nextBtn">&rsaquo;</button>
+        </div>
+        <div class="carousel-dots">
+          <button class="carousel-dot active"></button>
+          <button class="carousel-dot"></button>
+          <button class="carousel-dot"></button>
+          <button class="carousel-dot"></button>
+          <button class="carousel-dot"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-- <h2 class="section-title">All Books</h2> -->
+        <table class="books-table">
+          <!-- <thead>
+            <tr>
+              <th>Book</th>
+              <th>Description</th>
+            </tr>
+          </thead> -->
+          <tbody>
+            <tr>
+              <td data-label="Book">
+                <a href="https://mybook.to/zXIN" target="_blank" class="book-link">
+                  <img
+                    src="imgs/books/puppy-training.jpg"
+                    alt="Puppy Training Guide"
+                    class="book-cover"
+                  >
+                  <span class="book-title-link">Puppy Training Guide</span>
+                </a>
+              </td>
+              <td data-label="Description">
+                A comprehensive guide to raising a well-behaved and happy puppy. Includes training
+                tips, schedules, and behavioral advice.
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Book">
+                <a href="https://mybook.to/aKXx" target="_blank" class="book-link">
+                  <img
+                    src="imgs/books/australian-shepherd-puppy.jpg"
+                    alt="Australian Shepherd Puppy Training Guide"
+                    class="book-cover"
+                  >
+                  <span class="book-title-link">Australian Shepherd Puppy Training Guide</span>
+                </a>
+              </td>
+              <td data-label="Description">
+                How to use positive reinforcement methods for essential commands, socialization &
+                energy management to raise a high-energy herding dog.
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Book">
+                <a href="https://mybook.to/61hb" target="_blank" class="book-link">
+                  <img
+                    src="imgs/books/dog-logbook.jpg"
+                    alt="Dog Training & Health Logbook"
+                    class="book-cover"
+                  >
+                  <span class="book-title-link">Dog Training & Health Logbook</span>
+                </a>
+              </td>
+              <td data-label="Description">
+                Track your dog's training progress, health records, and memories in one
+                comprehensive logbook.
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Book">
+                <a href="https://mybook.to/VKAh" target="_blank" class="book-link">
+                  <img
+                    src="imgs/books/cat-logbook.jpg"
+                    alt="Cat Training & Health Logbook"
+                    class="book-cover"
+                  >
+                  <span class="book-title-link">Cat Training & Health Logbook</span>
+                </a>
+              </td>
+              <td data-label="Description">
+                Keep track of your cat's health, training milestones, and precious moments with this
+                organized logbook.
+              </td>
+            </tr>
+            <tr>
+              <td data-label="Book">
+                <a href="https://mybook.to/6T8zOM" target="_blank" class="book-link">
+                  <img
+                    src="imgs/books/horsetracker5.png"
+                    alt="Equine Passport & Health Tracker for Horses"
+                    class="book-cover"
+                  >
+                  <span class="book-title-link">Equine Passport & Health Tracker for Horses</span>
+                </a>
+              </td>
+              <td data-label="Description">
+                Keep your horse's health records organized with this comprehensive tracker. Perfect
+                for horse owners and trainers.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="back-link">
+      <a href="pets.html">&larr; Back to Paws & Pages</a>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <p>&copy; 2026 Paws & Pages. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const track = document.querySelector(".carousel-track");
+        const slides = document.querySelectorAll(".carousel-slide");
+        const dots = document.querySelectorAll(".carousel-dot");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+
+        function updateCarousel() {
+          track.style.transform = `translateX(-${currentIndex * 100}%)`;
+          dots.forEach((dot, i) => {
+            dot.classList.toggle("active", i === currentIndex);
+          });
+        }
+
+        function nextSlide() {
+          currentIndex = (currentIndex + 1) % totalSlides;
+          updateCarousel();
+        }
+
+        function prevSlide() {
+          currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+          updateCarousel();
+        }
+
+        if (nextBtn) nextBtn.addEventListener("click", nextSlide);
+        if (prevBtn) prevBtn.addEventListener("click", prevSlide);
+        dots.forEach((dot, i) => {
+          dot.addEventListener("click", () => {
+            currentIndex = i;
+            updateCarousel();
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

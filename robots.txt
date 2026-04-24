@@ -1,0 +1,62 @@
+# Taylor Brookingdale - Robots.txt
+# https://taylorbrookingdale.github.io/
+# Last updated: 2026-02-17
+
+# Allow all search engine crawlers
+User-agent: *
+Allow: /
+
+# Optimize crawl rate for AI/LLM crawlers
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Allow Google-specific crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+# Allow Bing crawlers
+User-agent: Bingbot
+Allow: /
+
+User-agent: BingPreview
+Allow: /
+
+# Block unnecessary crawlers to reduce server load
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://taylorbrookingdale.github.io/sitemap.xml
+
+# Crawl-delay for non-essential bots (if server resources are limited)
+# Crawl-delay: 10
+
+# Host directive for Yandex and other search engines
+Host: https://taylorbrookingdale.github.io
