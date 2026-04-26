@@ -1,6 +1,6 @@
 # Taylor Brookingdale - Robots.txt
 # https://taylorbrookingdale.github.io/
-# Last updated: 2026-02-17
+# Last updated: 2026-04-26
 
 # Allow all search engine crawlers
 User-agent: *
