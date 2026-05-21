@@ -1,730 +1,727 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light">
-    <title>Collections | Paws & Pages</title>
-    <meta
-      name="description"
-      content="Browse our collection of pet training journals, health trackers, and Rainbow Bridge memory books."
-    >
-    <link rel="canonical" href="https://taylorbrookingdale.github.io/collections.html">
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-      .carousel-section {
-        padding: calc(var(--spacing-unit) * 4) var(--spacing-unit);
-        background: linear-gradient(135deg, var(--verdigris), var(--charcoal-blue));
-        color: white;
-        min-height: 70vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
 
-      .carousel-section h2 {
-        color: white;
-        text-align: center;
-        margin-bottom: calc(var(--spacing-unit) * 2);
-      }
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Collections | Paws & Pages</title>
+  <meta name="description"
+    content="Browse our collection of pet training journals, health trackers, and Rainbow Bridge memory books.">
+  <link rel="canonical" href="https://taylorbrookingdale.github.io/collections.html">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .carousel-section {
+      padding: calc(var(--spacing-unit) * 4) var(--spacing-unit);
+      background: linear-gradient(135deg, var(--verdigris), var(--charcoal-blue));
+      color: white;
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-      .carousel-container {
-        position: relative;
-        max-width: 800px;
-        margin: 0 auto;
-        overflow: hidden;
-        border-radius: var(--border-radius);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      }
+    .carousel-section h2 {
+      color: white;
+      text-align: center;
+      margin-bottom: calc(var(--spacing-unit) * 2);
+    }
 
-      .carousel-track {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-      }
+    .carousel-container {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: var(--border-radius);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
 
-      .carousel-slide {
-        min-width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: calc(var(--spacing-unit) * 2);
-        background: var(--card-bg);
-        color: var(--text-color);
-        box-sizing: border-box;
-      }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
 
-      .carousel-slide img {
-        max-width: 250px;
-        height: auto;
-        border-radius: var(--border-radius);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        margin-bottom: 1rem;
-      }
+    .carousel-slide {
+      min-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: calc(var(--spacing-unit) * 2);
+      background: var(--card-bg);
+      color: var(--text-color);
+      box-sizing: border-box;
+    }
 
-      .carousel-slide h3 {
-        margin: 0.5rem 0;
-        color: var(--charcoal-blue);
-      }
+    .carousel-slide img {
+      max-width: 250px;
+      height: auto;
+      border-radius: var(--border-radius);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      margin-bottom: 1rem;
+    }
 
-      .carousel-slide p {
-        text-align: center;
-        max-width: 500px;
-        margin-bottom: 1rem;
-      }
+    .carousel-slide h3 {
+      margin: 0.5rem 0;
+      color: var(--charcoal-blue);
+    }
 
-      .carousel-nav {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        margin-top: 1rem;
-      }
+    .carousel-slide p {
+      text-align: center;
+      max-width: 500px;
+      margin-bottom: 1rem;
+    }
 
-      .carousel-btn {
-        background: rgba(255, 255, 255, 0.3);
-        border: none;
-        color: white;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        cursor: pointer;
-        font-size: 1.2rem;
-        transition: background 0.3s ease;
-      }
+    .carousel-nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
 
-      .carousel-btn:hover {
-        background: rgba(255, 255, 255, 0.5);
-      }
+    .carousel-btn {
+      background: rgba(255, 255, 255, 0.3);
+      border: none;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: background 0.3s ease;
+    }
 
-      .carousel-dots {
-        display: flex;
-        justify-content: center;
-        gap: 0.5rem;
-        margin-top: 1rem;
-      }
+    .carousel-btn:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
 
-      .carousel-dot {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.4);
-        border: none;
-        cursor: pointer;
-        transition: background 0.3s ease;
-      }
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
 
-      .carousel-dot.active {
-        background: white;
-      }
+    .carousel-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.4);
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
 
-      .back-link {
-        text-align: center;
-        padding: calc(var(--spacing-unit) * 2) 0;
-      }
+    .carousel-dot.active {
+      background: white;
+    }
 
-      .back-link a {
-        color: var(--charcoal-blue);
-        text-decoration: none;
-        font-weight: 600;
-        padding: 0.5rem 1rem;
-        border-radius: 25px;
-        transition: background-color 0.3s ease;
-      }
+    .back-link {
+      text-align: center;
+      padding: calc(var(--spacing-unit) * 2) 0;
+    }
 
-      .back-link a:hover {
-        background-color: var(--color-scheme-2-bg);
-        text-decoration: none;
-      }
+    .back-link a {
+      color: var(--charcoal-blue);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      transition: background-color 0.3s ease;
+    }
 
-      .books-table {
-        border-collapse: collapse;
-        width: 100%;
-      }
+    .back-link a:hover {
+      background-color: var(--color-scheme-2-bg);
+      text-decoration: none;
+    }
 
-      .books-table thead th {
-        border-bottom: 2px solid var(--charcoal-blue);
-        padding: 1rem;
-        text-align: left;
-      }
+    .books-table {
+      border-collapse: collapse;
+      width: 100%;
+    }
 
-      /* .books-table thead tr:first-child th {
+    .books-table thead th {
+      border-bottom: 2px solid var(--charcoal-blue);
+      padding: 1rem;
+      text-align: left;
+    }
+
+    /* .books-table thead tr:first-child th {
         border-top: 1px solid var(--charcoal-blue);
       } */
 
-      .books-table tbody tr {
-        border-bottom: 1px solid #ddd;
-      }
+    .books-table tbody tr {
+      border-bottom: 1px solid #ddd;
+    }
 
-      /* .books-table tbody tr td:first-child {
+    /* .books-table tbody tr td:first-child {
         border-left: 1px solid var(--charcoal-blue);
       } */
 
-      /* .books-table tbody tr td:last-child {
+    /* .books-table tbody tr td:last-child {
         border-right: 1px solid var(--charcoal-blue);
       } */
 
-      .books-table .book-link {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        text-decoration: none;
-        color: var(--charcoal-blue);
-        font-weight: 600;
-      }
+    .books-table .book-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      color: var(--charcoal-blue);
+      font-weight: 600;
+    }
 
-      .books-table .book-link:hover {
-        color: var(--verdigris);
-      }
+    .books-table .book-link:hover {
+      color: var(--verdigris);
+    }
 
-      .books-table .book-title-link {
-        text-decoration: underline;
-        text-decoration-color: var(--verdigris);
-        text-underline-offset: 3px;
-      }
+    .books-table .book-title-link {
+      text-decoration: underline;
+      text-decoration-color: var(--verdigris);
+      text-underline-offset: 3px;
+    }
 
-      .books-table .book-link:hover .book-title-link {
-        text-decoration-color: var(--charcoal-blue);
-      }
+    .books-table .book-link:hover .book-title-link {
+      text-decoration-color: var(--charcoal-blue);
+    }
 
+    .books-table .book-cover {
+      width: 60px;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .books-table td {
+      padding: 1rem;
+      vertical-align: middle;
+    }
+
+    @media (max-width: 600px) {
       .books-table .book-cover {
-        width: 60px;
-        height: auto;
-        border-radius: 4px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        width: 40px;
       }
+    }
+  </style>
+</head>
 
-      .books-table td {
-        padding: 1rem;
-        vertical-align: middle;
-      }
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="pets.html">Pets</a></li>
+          <li><a href="journals.html">Journals</a></li>
+          <li><a href="collections.html">Collections</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-      @media (max-width: 600px) {
-        .books-table .book-cover {
-          width: 40px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <nav>
-          <ul>
-            <li><a href="pets.html">Pets</a></li>
-            <li><a href="journals.html">Journals</a></li>
-            <li><a href="collections.html">Collections</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <section class="carousel-section">
-      <h2>Our Collections</h2>
-      <p style="text-align: center; color: white; margin-bottom: 1rem">
-        Browse our complete collection on <a
-          href="https://www.amazon.com/author/brookingdale"
-          target="_blank"
-          style="color: white; text-decoration: underline"
-        >Amazon</a>
-      </p>
-      <div class="carousel-container">
-        <div class="carousel-track">
-          <div class="carousel-slide" id="puppy-training">
-            <img src="imgs/books/puppy-training.jpg" alt="Puppy Training Guide">
-            <h3>Puppy Training Guide</h3>
-            <p>
-              A comprehensive guide to raising a well-behaved and happy puppy. Includes training
-              tips, schedules, and behavioral advice.
-            </p>
-            <a href="https://mybook.to/zXIN" target="_blank" class="btn">Get Your Copy</a>
-          </div>
-          <div class="carousel-slide">
-            <img src="imgs/books/australian-shepherd-puppy.jpg" alt="Australian Shepherd Puppy Training Guide">
-            <h3>Australian Shepherd Puppy Training Guide</h3>
-            <p>
-              How to use positive reinforcement methods for essential commands, socialization & energy
-              management to raise a high-energy herding dog.
-            </p>
-            <a href="https://mybook.to/flx5xKM" target="_blank" class="btn">Get Your Copy</a>
-          </div>
-          <div class="carousel-slide">
-            <img src="imgs/books/beagle-puppy.jpg" alt="Beagle Puppy Training Guide">
-            <h3>Beagle Puppy Training Guide</h3>
-            <p>
-              How to use positive reinforcement methods for house & potty training, socialization, scent
-              work & more for every dog breed.
-            </p>
-            <a href="https://mybook.to/NqeAZxr" target="_blank" class="btn">Get Your Copy</a>
-          </div>
-          <div class="carousel-slide">
-            <img src="imgs/books/dog-logbook.jpg" alt="Dog Training & Health Logbook">
-            <h3>Dog Training & Health Logbook</h3>
-            <p>
-              Track your dog's training progress, health records, and memories in one comprehensive
-              logbook.
-            </p>
-            <a href="https://mybook.to/61hb" target="_blank" class="btn">Get Your Copy</a>
-          </div>
-          <div class="carousel-slide">
-            <img src="imgs/books/cat-logbook.jpg" alt="Cat Training & Health Logbook">
-            <h3>Cat Training & Health Logbook</h3>
-            <p>
-              Keep track of your cat's health, training milestones, and precious moments with this
-              organized logbook.
-            </p>
-            <a href="https://mybook.to/VKAh" target="_blank" class="btn">Get Your Copy</a>
-          </div>
-          <div class="carousel-slide">
-            <img
-              src="imgs/books/horsetracker5.jpg"
-              alt="Equine Passport & Health Tracker for Horses"
-            >
-            <h3>Equine Passport & Health Tracker for Horses</h3>
-            <p>
-              Keep your horse's health records organized with this comprehensive tracker. Perfect
-              for horse owners and trainers.
-            </p>
-            <a href="https://mybook.to/6T8zOM" target="_blank" class="btn">Get Your Copy</a>
-          </div>
-          <div class="carousel-slide">
-            <img src="imgs/books/boxer.jpg" alt="Boxer Puppy Training Guide">
-            <h3>Boxer Puppy Training Guide</h3>
-            <p>
-              Positive reinforcement methods for house & potty training, core commands & socialization. Perfect for Boxers, Yorkies, Golden Retrievers, Bulldogs.
-            </p>
-            <a href="https://mybook.to/zHEmMB" target="_blank" class="btn">Get Your Copy</a>
-          </div>
-          <div class="carousel-slide">
-            <img src="imgs/books/bernise-mountain.jpg" alt="Bernese Mountain Dog Puppy Training Guide">
-            <h3>Bernese Mountain Dog Puppy Training Guide</h3>
-            <p>
-              Positive reinforcement methods for house & potty training, socialization, core commands & more. Perfect for Berners, Yorkies, Golden Retrievers, Bulldogs.
-            </p>
-            <a href="https://mybook.to/FmRF" target="_blank" class="btn">Get Your Copy</a>
-          </div>
-          <div class="carousel-slide">
-            <img src="imgs/books/border-collie.jpg" alt="Border Collie Puppy Training Guide">
-            <h3>Border Collie Puppy Training Guide: All About BC Dogs</h3>
-            <p>
-              Positive Reinforcement Methods for House & Potty Training, Mental Stimulation, Socialization & more. Perfect for Border Collies, Yorkies, Golden Retrievers, Bulldogs & More.
-            </p>
-            <a href="https://mybook.to/btGkAH" target="_blank" class="btn">Get Your Copy</a>
-            </div>
-            <div class="carousel-slide">
-            <img src="imgs/books/bulldog.jpg" alt="Bulldog Puppy Training Guide">
-            <h3>Bulldog Puppy Training Guide: From Frenchies to English & American Bulldogs</h3>
-            <p>
-              Positive reinforcement methods for house & potty training, socialization, core commands & more. Perfect for Frenchies, English Bulldogs, American Bulldogs & more.
-            </p>
-            <a href="https://mybook.to/Vo0OC" target="_blank" class="btn">Get Your Copy</a>
-             </div>
-             <div class="carousel-slide">
-               <img src="imgs/books/carne-corso.jpg" alt="Cane Corso Puppy Training Guide">
-               <h3>Cane Corso Puppy Training Guide: All About Italian Mastiff Dogs: Positive Reinforcement Methods for House Training, Socialization & Core Commands for ... Yorkies, Golden Retrievers, Bulldogs & More</h3>
-               <p>
-                 Positive reinforcement methods for house & potty training, socialization, core commands & more. Perfect for Cane Corso, Yorkies, Golden Retrievers, Bulldogs & more.
-               </p>
-               <a href="https://mybook.to/VVJa5" target="_blank" class="btn">Get Your Copy</a>
-              </div>
-              <div class="carousel-slide">
-                <img src="imgs/books/cavalier.jpg" alt="Cavalier King Charles Spaniel Puppy Training & Grooming Guide">
-                <h3>Cavalier King Charles Spaniel Puppy Training & Grooming Guide</h3>
-                <p>
-                  Positive reinforcement methods for house & potty training, grooming, socialization, core commands & more. Perfect for Cavalier King Charles Spaniels, Yorkies, Golden Retrievers, Bulldogs & more.
-                </p>
-                <a href="https://mybook.to/9NXr6VU" target="_blank" class="btn">Get Your Copy</a>
-              </div>
-              <div class="carousel-slide">
-                <img src="imgs/books/cockerspaniel.jpg" alt="Cocker Spaniel Puppy Training & Grooming Guide">
-                <h3>Cocker Spaniel Puppy Training & Grooming Guide</h3>
-                <p>
-                  Positive reinforcement methods for house & potty training, grooming, socialization, core commands & more. Perfect for Cocker Spaniels, Yorkies, Golden Retrievers, Bulldogs & more.
-                </p>
-                <a href="https://mybook.to/P0laY0g" target="_blank" class="btn">Get Your Copy</a>
-              </div>
-                <div class="carousel-slide">
-                  <img src="imgs/books/chihuahua.jpg" alt="Chihuahua Puppy Training & Grooming Guide">
-                  <h3>Chihuahua Puppy Training & Grooming Guide</h3>
-                  <p>
-                    Positive reinforcement methods for house & potty training, grooming, socialization, core commands & more. Perfect for Chihuahuas, Yorkies, Golden Retrievers, Bulldogs & more.
-                  </p>
-                  <a href="https://mybook.to/4pgr" target="_blank" class="btn">Get Your Copy</a>
-                </div>
-                <div class="carousel-slide">
-                  <img src="imgs/books/dachshund.jpg" alt="Dachshund Puppy Training & Grooming Guide">
-                  <h3>Dachshund Puppy Training & Grooming Guide: All About Sausage Dogs</h3>
-                  <p>
-                    Positive reinforcement methods for house & potty training, grooming, socialization, core commands & more. Perfect for Dachshunds, Yorkies, Golden Retrievers, Bulldogs & more.
-                  </p>
-                  <a href="https://mybook.to/RxIrV8" target="_blank" class="btn">Get Your Copy</a>
-                </div>
-                <div class="carousel-slide">
-                 <img src="imgs/books/welsh-corgi.jpg" alt="Welsh Corgi Puppy Training Guide">
-                 <h3>Welsh Corgi Puppy Training Guide: All About Corgi Dogs</h3>
-                 <p>
-                   Positive reinforcement methods for house & potty training, socialization, core commands & more. Perfect for Corgis, Yorkies, Golden Retrievers, Bulldogs & more.
-                 </p>
-                 <a href="https://mybook.to/kIwOS5" target="_blank" class="btn">Get Your Copy</a>
-               </div>
-               <div class="carousel-slide">
-                 <img src="imgs/books/maltese.jpg" alt="Maltese Puppy Training & Grooming Guide">
-                 <h3>Maltese Puppy Training & Grooming Guide: All About Maltese Dogs</h3>
-                 <p>
-                   Positive reinforcement methods for house & potty training, grooming, socialization, core commands & more. Perfect for Maltese, Yorkies, Golden Retrievers, Bulldogs & more.
-                 </p>
-                 <a href="https://mybook.to/CG4c0" target="_blank" class="btn">Get Your Copy</a>
-               </div>
-          <div class="carousel-nav">
+  <section class="carousel-section">
+    <h2>Our Collections</h2>
+    <p style="text-align: center; color: white; margin-bottom: 1rem">
+      Browse our complete collection on <a href="https://www.amazon.com/author/brookingdale" target="_blank"
+        style="color: white; text-decoration: underline">Amazon</a>
+    </p>
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <div class="carousel-slide" id="puppy-training">
+          <img src="imgs/books/puppy-training.jpg" alt="Puppy Training Guide">
+          <h3>Puppy Training Guide</h3>
+          <p>
+            A comprehensive guide to raising a well-behaved and happy puppy. Includes training
+            tips, schedules, and behavioral advice.
+          </p>
+          <a href="https://mybook.to/zXIN" target="_blank" class="btn">Get Your Copy</a>
+        </div>
+        <div class="carousel-slide">
+          <img src="imgs/books/australian-shepherd-puppy.jpg" alt="Australian Shepherd Puppy Training Guide">
+          <h3>Australian Shepherd Puppy Training Guide</h3>
+          <p>
+            How to use positive reinforcement methods for essential commands, socialization & energy
+            management to raise a high-energy herding dog.
+          </p>
+          <a href="https://mybook.to/flx5xKM" target="_blank" class="btn">Get Your Copy</a>
+        </div>
+        <div class="carousel-slide">
+          <img src="imgs/books/beagle-puppy.jpg" alt="Beagle Puppy Training Guide">
+          <h3>Beagle Puppy Training Guide</h3>
+          <p>
+            How to use positive reinforcement methods for house & potty training, socialization, scent
+            work & more for every dog breed.
+          </p>
+          <a href="https://mybook.to/NqeAZxr" target="_blank" class="btn">Get Your Copy</a>
+        </div>
+        <div class="carousel-slide">
+          <img src="imgs/books/dog-logbook.jpg" alt="Dog Training & Health Logbook">
+          <h3>Dog Training & Health Logbook</h3>
+          <p>
+            Track your dog's training progress, health records, and memories in one comprehensive
+            logbook.
+          </p>
+          <a href="https://mybook.to/61hb" target="_blank" class="btn">Get Your Copy</a>
+        </div>
+        <div class="carousel-slide">
+          <img src="imgs/books/cat-logbook.jpg" alt="Cat Training & Health Logbook">
+          <h3>Cat Training & Health Logbook</h3>
+          <p>
+            Keep track of your cat's health, training milestones, and precious moments with this
+            organized logbook.
+          </p>
+          <a href="https://mybook.to/VKAh" target="_blank" class="btn">Get Your Copy</a>
+        </div>
+        <div class="carousel-slide">
+          <img src="imgs/books/horsetracker5.jpg" alt="Equine Passport & Health Tracker for Horses">
+          <h3>Equine Passport & Health Tracker for Horses</h3>
+          <p>
+            Keep your horse's health records organized with this comprehensive tracker. Perfect
+            for horse owners and trainers.
+          </p>
+          <a href="https://mybook.to/6T8zOM" target="_blank" class="btn">Get Your Copy</a>
+        </div>
+        <div class="carousel-slide">
+          <img src="imgs/books/boxer.jpg" alt="Boxer Puppy Training Guide">
+          <h3>Boxer Puppy Training Guide</h3>
+          <p>
+            Positive reinforcement methods for house & potty training, core commands & socialization. Perfect for
+            Boxers, Yorkies, Golden Retrievers, Bulldogs.
+          </p>
+          <a href="https://mybook.to/zHEmMB" target="_blank" class="btn">Get Your Copy</a>
+        </div>
+        <div class="carousel-slide">
+          <img src="imgs/books/bernise-mountain.jpg" alt="Bernese Mountain Dog Puppy Training Guide">
+          <h3>Bernese Mountain Dog Puppy Training Guide</h3>
+          <p>
+            Positive reinforcement methods for house & potty training, socialization, core commands & more. Perfect for
+            Berners, Yorkies, Golden Retrievers, Bulldogs.
+          </p>
+          <a href="https://mybook.to/FmRF" target="_blank" class="btn">Get Your Copy</a>
+        </div>
+        <div class="carousel-slide">
+          <img src="imgs/books/border-collie.jpg" alt="Border Collie Puppy Training Guide">
+          <h3>Border Collie Puppy Training Guide: All About BC Dogs</h3>
+          <p>
+            Positive Reinforcement Methods for House & Potty Training, Mental Stimulation, Socialization & more. Perfect
+            for Border Collies, Yorkies, Golden Retrievers, Bulldogs & More.
+          </p>
+          <a href="https://mybook.to/btGkAH" target="_blank" class="btn">Get Your Copy</a>
+        </div>
+        <div class="carousel-slide">
+          <img src="imgs/books/bulldog.jpg" alt="Bulldog Puppy Training Guide">
+          <h3>Bulldog Puppy Training Guide: From Frenchies to English & American Bulldogs</h3>
+          <p>
+            Positive reinforcement methods for house & potty training, socialization, core commands & more. Perfect for
+            Frenchies, English Bulldogs, American Bulldogs & more.
+          </p>
+          <a href="https://mybook.to/Vo0OC" target="_blank" class="btn">Get Your Copy</a>
+        </div>
+        <div class="carousel-slide">
+          <img src="imgs/books/carne-corso.jpg" alt="Cane Corso Puppy Training Guide">
+          <h3>Cane Corso Puppy Training Guide: All About Italian Mastiff Dogs: Positive Reinforcement Methods for House
+            Training, Socialization & Core Commands for ... Yorkies, Golden Retrievers, Bulldogs & More</h3>
+          <p>
+            Positive reinforcement methods for house & potty training, socialization, core commands & more. Perfect for
+            Cane Corso, Yorkies, Golden Retrievers, Bulldogs & more.
+          </p>
+          <a href="https://mybook.to/VVJa5" target="_blank" class="btn">Get Your Copy</a>
+        </div>
+        <div class="carousel-slide">
+          <img src="imgs/books/cavalier.jpg" alt="Cavalier King Charles Spaniel Puppy Training & Grooming Guide">
+          <h3>Cavalier King Charles Spaniel Puppy Training & Grooming Guide</h3>
+          <p>
+            Positive reinforcement methods for house & potty training, grooming, socialization, core commands & more.
+            Perfect for Cavalier King Charles Spaniels, Yorkies, Golden Retrievers, Bulldogs & more.
+          </p>
+          <a href="https://mybook.to/9NXr6VU" target="_blank" class="btn">Get Your Copy</a>
+        </div>
+        <div class="carousel-slide">
+          <img src="imgs/books/cockerspaniel.jpg" alt="Cocker Spaniel Puppy Training & Grooming Guide">
+          <h3>Cocker Spaniel Puppy Training & Grooming Guide</h3>
+          <p>
+            Positive reinforcement methods for house & potty training, grooming, socialization, core commands & more.
+            Perfect for Cocker Spaniels, Yorkies, Golden Retrievers, Bulldogs & more.
+          </p>
+          <a href="https://mybook.to/P0laY0g" target="_blank" class="btn">Get Your Copy</a>
+        </div>
+        <div class="carousel-slide">
+          <img src="imgs/books/chihuahua.jpg" alt="Chihuahua Puppy Training & Grooming Guide">
+          <h3>Chihuahua Puppy Training & Grooming Guide</h3>
+          <p>
+            Positive reinforcement methods for house & potty training, grooming, socialization, core commands & more.
+            Perfect for Chihuahuas, Yorkies, Golden Retrievers, Bulldogs & more.
+          </p>
+          <a href="https://mybook.to/4pgr" target="_blank" class="btn">Get Your Copy</a>
+        </div>
+        <div class="carousel-slide">
+          <img src="imgs/books/dachshund.jpg" alt="Dachshund Puppy Training & Grooming Guide">
+          <h3>Dachshund Puppy Training & Grooming Guide: All About Sausage Dogs</h3>
+          <p>
+            Positive reinforcement methods for house & potty training, grooming, socialization, core commands & more.
+            Perfect for Dachshunds, Yorkies, Golden Retrievers, Bulldogs & more.
+          </p>
+          <a href="https://mybook.to/RxIrV8" target="_blank" class="btn">Get Your Copy</a>
+        </div>
+        <div class="carousel-slide">
+          <img src="imgs/books/welsh-corgi.jpg" alt="Welsh Corgi Puppy Training Guide">
+          <h3>Welsh Corgi Puppy Training Guide: All About Corgi Dogs</h3>
+          <p>
+            Positive reinforcement methods for house & potty training, socialization, core commands & more. Perfect for
+            Corgis, Yorkies, Golden Retrievers, Bulldogs & more.
+          </p>
+          <a href="https://mybook.to/kIwOS5" target="_blank" class="btn">Get Your Copy</a>
+        </div>
+        <div class="carousel-slide">
+          <img src="imgs/books/maltese.jpg" alt="Maltese Puppy Training & Grooming Guide">
+          <h3>Maltese Puppy Training & Grooming Guide: All About Maltese Dogs</h3>
+          <p>
+            Positive reinforcement methods for house & potty training, grooming, socialization, core commands & more.
+            Perfect for Maltese, Yorkies, Golden Retrievers, Bulldogs & more.
+          </p>
+          <a href="https://mybook.to/CG4c0" target="_blank" class="btn">Get Your Copy</a>
+        </div>
+        <div class="carousel-slide">
+          <img src="imgs/books/pomeranian.jpg"
+            alt="Pomeranian Puppy Training & Grooming Guide: All About Pomeranian Dogs link">
+          <h3>Pomeranian Puppy Training & Grooming Guide: All About Pomeranian Dogs</h3>
+          <p>Pomeranian Puppy Training & Grooming Guide: All About Pomeranian Dogs: Positive Reinforcement Methods for House & Potty Training, Separation Anxiety, ... for a Confident, Fluffy Companion</p>
+        </div>
+        <div class="carousel-slide">
+          <img src="imgs/books/poodle.jpg"
+            alt="Poodle Puppy Training and Grooming Guide: For Toy, Miniature and Standard Poodle Dogs link">
+          <h3>Poodle Puppy Training and Grooming Guide: For Toy, Miniature and Standard Poodle Dogs</h3>
+          <p>Poodle Puppy Training and Grooming Guide: For Toy, Miniature and Standard Poodle Dogs: Positive Reinforcement Methods for House & Potty Training</p>
+        </div>
+        <div class="carousel-nav">
           <button class="carousel-btn" id="prevBtn">&lsaquo;</button>
           <button class="carousel-btn" id="nextBtn">&rsaquo;</button>
         </div>
-          <div class="carousel-dots">
-            <button class="carousel-dot active"></button>
-            <button class="carousel-dot"></button>
-            <button class="carousel-dot"></button>
-            <button class="carousel-dot"></button>
-            <button class="carousel-dot"></button>
-            <button class="carousel-dot"></button>
-            <button class="carousel-dot"></button>
-            <button class="carousel-dot"></button>
-              <button class="carousel-dot"></button>
-              <button class="carousel-dot"></button>
-               <button class="carousel-dot"></button>
-               <button class="carousel-dot"></button>
-               <button class="carousel-dot"></button>
-                <button class="carousel-dot"></button>
-                <button class="carousel-dot"></button>
-                <button class="carousel-dot"></button>
-                 <button class="carousel-dot"></button>
-                 </div>
+        <div class="carousel-dots">
+          <button class="carousel-dot active"></button>
+          <button class="carousel-dot"></button>
+          <button class="carousel-dot"></button>
+          <button class="carousel-dot"></button>
+          <button class="carousel-dot"></button>
+          <button class="carousel-dot"></button>
+          <button class="carousel-dot"></button>
+          <button class="carousel-dot"></button>
+          <button class="carousel-dot"></button>
+          <button class="carousel-dot"></button>
+          <button class="carousel-dot"></button>
+          <button class="carousel-dot"></button>
+          <button class="carousel-dot"></button>
+          <button class="carousel-dot"></button>
+          <button class="carousel-dot"></button>
+          <button class="carousel-dot"></button>
+          <button class="carousel-dot"></button>
+          <button class="carousel-dot"></button>
+          <button class="carousel-dot"></button>
+        </div>
       </div>
-    </section>
+  </section>
 
-    <section class="section">
-      <div class="container">
-        <!-- <h2 class="section-title">All Books</h2> -->
-        <table class="books-table">
-          <!-- <thead>
+  <section class="section">
+    <div class="container">
+      <!-- <h2 class="section-title">All Books</h2> -->
+      <table class="books-table">
+        <!-- <thead>
             <tr>
               <th>Book</th>
               <th>Description</th>
             </tr>
           </thead> -->
-          <tbody>
-            <tr>
-              <td data-label="Book">
-                <a href="https://mybook.to/zXIN" target="_blank" class="book-link">
-                  <img
-                    src="imgs/books/puppy-training.jpg"
-                    alt="Puppy Training Guide"
-                    class="book-cover"
-                  >
-                  <span class="book-title-link">Puppy Training Guide</span>
-                </a>
-              </td>
-              <td data-label="Description">
-                A comprehensive guide to raising a well-behaved and happy puppy. Includes training
-                tips, schedules, and behavioral advice.
-              </td>
-            </tr>
-            <tr>
-              <td data-label="Book">
-                <a href="https://mybook.to/flx5xKM" target="_blank" class="book-link">
-                  <img
-                    src="imgs/books/australian-shepherd-puppy.jpg"
-                    alt="Australian Shepherd Puppy Training Guide"
-                    class="book-cover"
-                  >
-                  <span class="book-title-link">Australian Shepherd Puppy Training Guide</span>
-                </a>
-              </td>
-              <td data-label="Description">
-                How to use positive reinforcement methods for essential commands, socialization &
-                energy management to raise a high-energy herding dog.
-              </td>
-            </tr>
-            <tr>
-              <td data-label="Book">
-                <a href="https://mybook.to/NqeAZxr" target="_blank" class="book-link">
-                  <img
-                    src="imgs/books/beagle-puppy.jpg"
-                    alt="Beagle Puppy Training Guide"
-                    class="book-cover"
-                  >
-                  <span class="book-title-link">Beagle Puppy Training Guide</span>
-                </a>
-              </td>
-              <td data-label="Description">
-                How to use positive reinforcement methods for house & potty training, socialization,
-                scent work & more for every dog breed.
-              </td>
-            </tr>
-            <tr>
-              <td data-label="Book">
-                <a href="https://mybook.to/61hb" target="_blank" class="book-link">
-                  <img
-                    src="imgs/books/dog-logbook.jpg"
-                    alt="Dog Training & Health Logbook"
-                    class="book-cover"
-                  >
-                  <span class="book-title-link">Dog Training & Health Logbook</span>
-                </a>
-              </td>
-              <td data-label="Description">
-                Track your dog's training progress, health records, and memories in one
-                comprehensive logbook.
-              </td>
-            </tr>
-            <tr>
-              <td data-label="Book">
-                <a href="https://mybook.to/VKAh" target="_blank" class="book-link">
-                  <img
-                    src="imgs/books/cat-logbook.jpg"
-                    alt="Cat Training & Health Logbook"
-                    class="book-cover"
-                  >
-                  <span class="book-title-link">Cat Training & Health Logbook</span>
-                </a>
-              </td>
-              <td data-label="Description">
-                Keep track of your cat's health, training milestones, and precious moments with this
-                organized logbook.
-              </td>
-            </tr>
-            <tr>
-              <td data-label="Book">
-                <a href="https://mybook.to/6T8zOM" target="_blank" class="book-link">
-                  <img
-                    src="imgs/books/horsetracker5.jpg"
-                    alt="Equine Passport & Health Tracker for Horses"
-                    class="book-cover"
-                  >
-                  <span class="book-title-link">Equine Passport & Health Tracker for Horses</span>
-                </a>
-              </td>
-              <td data-label="Description">
-                Keep your horse's health records organized with this comprehensive tracker. Perfect
-                for horse owners and trainers.
-              </td>
-            </tr>
-            <tr>
-              <td data-label="Book">
-                <a href="https://mybook.to/zHEmMB" target="_blank" class="book-link">
-                  <img
-                    src="imgs/books/boxer.jpg"
-                    alt="Boxer Puppy Training Guide"
-                    class="book-cover"
-                  >
-                  <span class="book-title-link">Boxer Puppy Training Guide</span>
-                </a>
-              </td>
-              <td data-label="Description">
-                Positive reinforcement methods for house & potty training, core commands & socialization. Perfect for Boxers, Yorkies, Golden Retrievers, Bulldogs.
-              </td>
-             </tr>
-              <tr>
-                <td data-label="Book">
-                  <a href="https://mybook.to/FmRF" target="_blank" class="book-link">
-                    <img
-                      src="imgs/books/bernise-mountain.jpg"
-                      alt="Bernese Mountain Dog Puppy Training Guide"
-                      class="book-cover"
-                    >
-                    <span class="book-title-link">Bernese Mountain Dog Puppy Training Guide</span>
-                  </a>
-                </td>
-                <td data-label="Description">
-                  Positive reinforcement methods for house & potty training, socialization, core commands & more. Perfect for Berners, Yorkies, Golden Retrievers, Bulldogs.
-                </td>
-              </tr>
-              <tr>
-                <td data-label="Book">
-                  <a href="https://mybook.to/btGkAH" target="_blank" class="book-link">
-                    <img
-                      src="imgs/books/border-collie.jpg"
-                      alt="Border Collie Puppy Training Guide"
-                      class="book-cover"
-                    >
-                    <span class="book-title-link">Border Collie Puppy Training Guide</span>
-                  </a>
-                </td>
-                <td data-label="Description">
-                  Positive Reinforcement Methods for House & Potty Training, Mental Stimulation, Socialization & more. Perfect for Border Collies, Yorkies, Golden Retrievers, Bulldogs & More.
-                </td>
-               </tr>
-               <tr>
-                 <td data-label="Book">
-                   <a href="https://mybook.to/Vo0OC" target="_blank" class="book-link">
-                     <img
-                       src="imgs/books/bulldog.jpg"
-                       alt="Bulldog Puppy Training Guide"
-                       class="book-cover"
-                     >
-                     <span class="book-title-link">Bulldog Puppy Training Guide: From Frenchies to English & American Bulldogs</span>
-                   </a>
-                 </td>
-                 <td data-label="Description">
-                   Positive reinforcement methods for house & potty training, socialization, core commands & more. Perfect for Frenchies, English Bulldogs, American Bulldogs & more.
-                 </td>
-                </tr>
-                <tr>
-                  <td data-label="Book">
-                    <a href="https://mybook.to/VVJa5" target="_blank" class="book-link">
-                      <img
-                        src="imgs/books/carne-corso.jpg"
-                        alt="Cane Corso Puppy Training Guide"
-                        class="book-cover"
-                      >
-                      <span class="book-title-link">Cane Corso Puppy Training Guide</span>
-                    </a>
-                  </td>
-                  <td data-label="Description">
-                    Positive reinforcement methods for house & potty training, socialization, core commands & more. Perfect for Cane Corso, Yorkies, Golden Retrievers, Bulldogs & more.
-                  </td>
-                 </tr>
-                 <tr>
-                   <td data-label="Book">
-                     <a href="https://mybook.to/9NXr6VU" target="_blank" class="book-link">
-                       <img
-                         src="imgs/books/cavalier.jpg"
-                         alt="Cavalier King Charles Spaniel Puppy Training & Grooming Guide"
-                         class="book-cover"
-                       >
-                      <span class="book-title-link">Cavalier King Charles Spaniel Puppy Training & Grooming Guide</span>
-                    </a>
-                  </td>
-                  <td data-label="Description">
-                    Positive reinforcement methods for house & potty training, grooming, socialization, core commands & more. Perfect for Cavalier King Charles Spaniels, Yorkies, Golden Retrievers, Bulldogs & more.
-                  </td>
-                </tr>
-                <tr>
-                  <td data-label="Book">
-                    <a href="https://mybook.to/P0laY0g" target="_blank" class="book-link">
-                      <img
-                        src="imgs/books/cockerspaniel.jpg"
-                        alt="Cocker Spaniel Puppy Training & Grooming Guide"
-                        class="book-cover"
-                      >
-                      <span class="book-title-link">Cocker Spaniel Puppy Training & Grooming Guide</span>
-                    </a>
-                  </td>
-                  <td data-label="Description">
-                    Positive reinforcement methods for house & potty training, grooming, socialization, core commands & more. Perfect for Cocker Spaniels, Yorkies, Golden Retrievers, Bulldogs & more.
-                  </td>
-                  </tr>
-                 <tr>
-                   <td data-label="Book">
-                     <a href="https://mybook.to/4pgr" target="_blank" class="book-link">
-                       <img
-                         src="imgs/books/chihuahua.jpg"
-                         alt="Chihuahua Puppy Training & Grooming Guide"
-                         class="book-cover"
-                       >
-                       <span class="book-title-link">Chihuahua Puppy Training & Grooming Guide</span>
-                     </a>
-                   </td>
-                   <td data-label="Description">
-                      Positive reinforcement methods for house & potty training, grooming, socialization, core commands & more. Perfect for Chihuahuas, Yorkies, Golden Retrievers, Bulldogs & more.
-                    </td>
-                  </tr>
-                  <tr>
-                    <td data-label="Book">
-                      <a href="https://mybook.to/RxIrV8" target="_blank" class="book-link">
-                        <img
-                          src="imgs/books/dachshund.jpg"
-                          alt="Dachshund Puppy Training & Grooming Guide"
-                          class="book-cover"
-                        >
-                        <span class="book-title-link">Dachshund Puppy Training & Grooming Guide: All About Sausage Dogs</span>
-                      </a>
-                    </td>
-                    <td data-label="Description">
-                      Positive reinforcement methods for house & potty training, grooming, socialization, core commands & more. Perfect for Dachshunds, Yorkies, Golden Retrievers, Bulldogs & more.
-                    </td>
-                  </tr>
-                    <tr>
-                     <td data-label="Book">
-                       <a href="https://mybook.to/kIwOS5" target="_blank" class="book-link">
-                         <img
-                           src="imgs/books/welsh-corgi.jpg"
-                           alt="Welsh Corgi Puppy Training Guide"
-                           class="book-cover"
-                         >
-                         <span class="book-title-link">Welsh Corgi Puppy Training Guide</span>
-                       </a>
-                     </td>
-                     <td data-label="Description">
-                       Positive reinforcement methods for house & potty training, socialization, core commands & more. Perfect for Corgis, Yorkies, Golden Retrievers, Bulldogs & more.
-                     </td>
-                   </tr>
-                   <tr>
-                     <td data-label="Book">
-                       <a href="https://mybook.to/CG4c0" target="_blank" class="book-link">
-                         <img
-                           src="imgs/books/maltese.jpg"
-                           alt="Maltese Puppy Training & Grooming Guide"
-                           class="book-cover"
-                         >
-                         <span class="book-title-link">Maltese Puppy Training & Grooming Guide: All About Maltese Dogs</span>
-                       </a>
-                     </td>
-                     <td data-label="Description">
-                       Positive reinforcement methods for house & potty training, grooming, socialization, core commands & more. Perfect for Maltese, Yorkies, Golden Retrievers, Bulldogs & more.
-                     </td>
-                   </tr>
-                 </tbody>
-        </table>
-      </div>
-    </section>
-
-    <div class="back-link">
-      <a href="pets.html">&larr; Back to Paws & Pages</a>
+        <tbody>
+          <tr>
+            <td data-label="Book">
+              <a href="https://mybook.to/zXIN" target="_blank" class="book-link">
+                <img src="imgs/books/puppy-training.jpg" alt="Puppy Training Guide" class="book-cover">
+                <span class="book-title-link">Puppy Training Guide</span>
+              </a>
+            </td>
+            <td data-label="Description">
+              A comprehensive guide to raising a well-behaved and happy puppy. Includes training
+              tips, schedules, and behavioral advice.
+            </td>
+          </tr>
+          <tr>
+            <td data-label="Book">
+              <a href="https://mybook.to/flx5xKM" target="_blank" class="book-link">
+                <img src="imgs/books/australian-shepherd-puppy.jpg" alt="Australian Shepherd Puppy Training Guide"
+                  class="book-cover">
+                <span class="book-title-link">Australian Shepherd Puppy Training Guide</span>
+              </a>
+            </td>
+            <td data-label="Description">
+              How to use positive reinforcement methods for essential commands, socialization &
+              energy management to raise a high-energy herding dog.
+            </td>
+          </tr>
+          <tr>
+            <td data-label="Book">
+              <a href="https://mybook.to/NqeAZxr" target="_blank" class="book-link">
+                <img src="imgs/books/beagle-puppy.jpg" alt="Beagle Puppy Training Guide" class="book-cover">
+                <span class="book-title-link">Beagle Puppy Training Guide</span>
+              </a>
+            </td>
+            <td data-label="Description">
+              How to use positive reinforcement methods for house & potty training, socialization,
+              scent work & more for every dog breed.
+            </td>
+          </tr>
+          <tr>
+            <td data-label="Book">
+              <a href="https://mybook.to/61hb" target="_blank" class="book-link">
+                <img src="imgs/books/dog-logbook.jpg" alt="Dog Training & Health Logbook" class="book-cover">
+                <span class="book-title-link">Dog Training & Health Logbook</span>
+              </a>
+            </td>
+            <td data-label="Description">
+              Track your dog's training progress, health records, and memories in one
+              comprehensive logbook.
+            </td>
+          </tr>
+          <tr>
+            <td data-label="Book">
+              <a href="https://mybook.to/VKAh" target="_blank" class="book-link">
+                <img src="imgs/books/cat-logbook.jpg" alt="Cat Training & Health Logbook" class="book-cover">
+                <span class="book-title-link">Cat Training & Health Logbook</span>
+              </a>
+            </td>
+            <td data-label="Description">
+              Keep track of your cat's health, training milestones, and precious moments with this
+              organized logbook.
+            </td>
+          </tr>
+          <tr>
+            <td data-label="Book">
+              <a href="https://mybook.to/6T8zOM" target="_blank" class="book-link">
+                <img src="imgs/books/horsetracker5.jpg" alt="Equine Passport & Health Tracker for Horses"
+                  class="book-cover">
+                <span class="book-title-link">Equine Passport & Health Tracker for Horses</span>
+              </a>
+            </td>
+            <td data-label="Description">
+              Keep your horse's health records organized with this comprehensive tracker. Perfect
+              for horse owners and trainers.
+            </td>
+          </tr>
+          <tr>
+            <td data-label="Book">
+              <a href="https://mybook.to/zHEmMB" target="_blank" class="book-link">
+                <img src="imgs/books/boxer.jpg" alt="Boxer Puppy Training Guide" class="book-cover">
+                <span class="book-title-link">Boxer Puppy Training Guide</span>
+              </a>
+            </td>
+            <td data-label="Description">
+              Positive reinforcement methods for house & potty training, core commands & socialization. Perfect for
+              Boxers, Yorkies, Golden Retrievers, Bulldogs.
+            </td>
+          </tr>
+          <tr>
+            <td data-label="Book">
+              <a href="https://mybook.to/FmRF" target="_blank" class="book-link">
+                <img src="imgs/books/bernise-mountain.jpg" alt="Bernese Mountain Dog Puppy Training Guide"
+                  class="book-cover">
+                <span class="book-title-link">Bernese Mountain Dog Puppy Training Guide</span>
+              </a>
+            </td>
+            <td data-label="Description">
+              Positive reinforcement methods for house & potty training, socialization, core commands & more. Perfect
+              for Berners, Yorkies, Golden Retrievers, Bulldogs.
+            </td>
+          </tr>
+          <tr>
+            <td data-label="Book">
+              <a href="https://mybook.to/btGkAH" target="_blank" class="book-link">
+                <img src="imgs/books/border-collie.jpg" alt="Border Collie Puppy Training Guide" class="book-cover">
+                <span class="book-title-link">Border Collie Puppy Training Guide</span>
+              </a>
+            </td>
+            <td data-label="Description">
+              Positive Reinforcement Methods for House & Potty Training, Mental Stimulation, Socialization & more.
+              Perfect for Border Collies, Yorkies, Golden Retrievers, Bulldogs & More.
+            </td>
+          </tr>
+          <tr>
+            <td data-label="Book">
+              <a href="https://mybook.to/Vo0OC" target="_blank" class="book-link">
+                <img src="imgs/books/bulldog.jpg" alt="Bulldog Puppy Training Guide" class="book-cover">
+                <span class="book-title-link">Bulldog Puppy Training Guide: From Frenchies to English & American
+                  Bulldogs</span>
+              </a>
+            </td>
+            <td data-label="Description">
+              Positive reinforcement methods for house & potty training, socialization, core commands & more. Perfect
+              for Frenchies, English Bulldogs, American Bulldogs & more.
+            </td>
+          </tr>
+          <tr>
+            <td data-label="Book">
+              <a href="https://mybook.to/VVJa5" target="_blank" class="book-link">
+                <img src="imgs/books/carne-corso.jpg" alt="Cane Corso Puppy Training Guide" class="book-cover">
+                <span class="book-title-link">Cane Corso Puppy Training Guide</span>
+              </a>
+            </td>
+            <td data-label="Description">
+              Positive reinforcement methods for house & potty training, socialization, core commands & more. Perfect
+              for Cane Corso, Yorkies, Golden Retrievers, Bulldogs & more.
+            </td>
+          </tr>
+          <tr>
+            <td data-label="Book">
+              <a href="https://mybook.to/9NXr6VU" target="_blank" class="book-link">
+                <img src="imgs/books/cavalier.jpg" alt="Cavalier King Charles Spaniel Puppy Training & Grooming Guide"
+                  class="book-cover">
+                <span class="book-title-link">Cavalier King Charles Spaniel Puppy Training & Grooming Guide</span>
+              </a>
+            </td>
+            <td data-label="Description">
+              Positive reinforcement methods for house & potty training, grooming, socialization, core commands & more.
+              Perfect for Cavalier King Charles Spaniels, Yorkies, Golden Retrievers, Bulldogs & more.
+            </td>
+          </tr>
+          <tr>
+            <td data-label="Book">
+              <a href="https://mybook.to/P0laY0g" target="_blank" class="book-link">
+                <img src="imgs/books/cockerspaniel.jpg" alt="Cocker Spaniel Puppy Training & Grooming Guide"
+                  class="book-cover">
+                <span class="book-title-link">Cocker Spaniel Puppy Training & Grooming Guide</span>
+              </a>
+            </td>
+            <td data-label="Description">
+              Positive reinforcement methods for house & potty training, grooming, socialization, core commands & more.
+              Perfect for Cocker Spaniels, Yorkies, Golden Retrievers, Bulldogs & more.
+            </td>
+          </tr>
+          <tr>
+            <td data-label="Book">
+              <a href="https://mybook.to/4pgr" target="_blank" class="book-link">
+                <img src="imgs/books/chihuahua.jpg" alt="Chihuahua Puppy Training & Grooming Guide" class="book-cover">
+                <span class="book-title-link">Chihuahua Puppy Training & Grooming Guide</span>
+              </a>
+            </td>
+            <td data-label="Description">
+              Positive reinforcement methods for house & potty training, grooming, socialization, core commands & more.
+              Perfect for Chihuahuas, Yorkies, Golden Retrievers, Bulldogs & more.
+            </td>
+          </tr>
+          <tr>
+            <td data-label="Book">
+              <a href="https://mybook.to/RxIrV8" target="_blank" class="book-link">
+                <img src="imgs/books/dachshund.jpg" alt="Dachshund Puppy Training & Grooming Guide" class="book-cover">
+                <span class="book-title-link">Dachshund Puppy Training & Grooming Guide: All About Sausage Dogs</span>
+              </a>
+            </td>
+            <td data-label="Description">
+              Positive reinforcement methods for house & potty training, grooming, socialization, core commands & more.
+              Perfect for Dachshunds, Yorkies, Golden Retrievers, Bulldogs & more.
+            </td>
+          </tr>
+          <tr>
+            <td data-label="Book">
+              <a href="https://mybook.to/kIwOS5" target="_blank" class="book-link">
+                <img src="imgs/books/welsh-corgi.jpg" alt="Welsh Corgi Puppy Training Guide" class="book-cover">
+                <span class="book-title-link">Welsh Corgi Puppy Training Guide</span>
+              </a>
+            </td>
+            <td data-label="Description">
+              Positive reinforcement methods for house & potty training, socialization, core commands & more. Perfect
+              for Corgis, Yorkies, Golden Retrievers, Bulldogs & more.
+            </td>
+          </tr>
+          <tr>
+            <td data-label="Book">
+              <a href="https://mybook.to/CG4c0" target="_blank" class="book-link">
+                <img src="imgs/books/maltese.jpg" alt="Maltese Puppy Training & Grooming Guide" class="book-cover">
+                <span class="book-title-link">Maltese Puppy Training & Grooming Guide: All About Maltese Dogs</span>
+              </a>
+            </td>
+            <td data-label="Description">
+              Positive reinforcement methods for house & potty training, grooming, socialization, core commands & more.
+              Perfect for Maltese, Yorkies, Golden Retrievers, Bulldogs & more.
+            </td>
+          </tr>
+          <tr>
+            <td data-label="Book">
+              <a href="https://mybook.to/J2TCOxz" target="_blank" class="book-link">
+                <img src="imgs/books/pomeranian.jpg"
+                  alt="Pomeranian Puppy Training & Grooming Guide: All About Pomeranian Dogs link" class="book-cover">
+                <span class="book-title-link">Pomeranian Puppy Training & Grooming Guide: All About Pomeranian
+                  Dogs</span>
+              </a>
+            </td>
+            <td data-label="Description">
+              Pomeranian Puppy Training & Grooming Guide: All About Pomeranian Dogs: Positive Reinforcement Methods for House & Potty Training, Separation Anxiety, ... for a Confident, Fluffy Companion
+            </td>
+          </tr>
+          <tr>
+            <td data-label="Book">
+              <a href="https://mybook.to/Vu6l8" target="_blank" class="book-link">
+                <img src="imgs/books/poodle.jpg"
+                  alt="Poodle Puppy Training and Grooming Guide: For Toy, Miniature and Standard Poodle Dogs link"
+                  class="book-cover">
+                <span class="book-title-link">Poodle Puppy Training and Grooming Guide: For Toy, Miniature and Standard
+                  Poodle Dogs</span>
+              </a>
+            </td>
+            <td data-label="Description">
+              Poodle Puppy Training and Grooming Guide: For Toy, Miniature and Standard Poodle Dogs: Positive Reinforcement Methods for House & Potty Training
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+  </section>
 
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <p>&copy; 2026 Paws & Pages. All rights reserved.</p>
-        </div>
+  <div class="back-link">
+    <a href="pets.html">&larr; Back to Paws & Pages</a>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2026 Paws & Pages. All rights reserved.</p>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const track = document.querySelector(".carousel-track");
-        const slides = document.querySelectorAll(".carousel-slide");
-        const dots = document.querySelectorAll(".carousel-dot");
-        const prevBtn = document.getElementById("prevBtn");
-        const nextBtn = document.getElementById("nextBtn");
-        let currentIndex = 0;
-        const totalSlides = slides.length;
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const track = document.querySelector(".carousel-track");
+      const slides = document.querySelectorAll(".carousel-slide");
+      const dots = document.querySelectorAll(".carousel-dot");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+      let currentIndex = 0;
+      const totalSlides = slides.length;
 
-        function updateCarousel() {
-          track.style.transform = `translateX(-${currentIndex * 100}%)`;
-          dots.forEach((dot, i) => {
-            dot.classList.toggle("active", i === currentIndex);
-          });
-        }
-
-        function nextSlide() {
-          currentIndex = (currentIndex + 1) % totalSlides;
-          updateCarousel();
-        }
-
-        function prevSlide() {
-          currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-          updateCarousel();
-        }
-
-        if (nextBtn) nextBtn.addEventListener("click", nextSlide);
-        if (prevBtn) prevBtn.addEventListener("click", prevSlide);
+      function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
         dots.forEach((dot, i) => {
-          dot.addEventListener("click", () => {
-            currentIndex = i;
-            updateCarousel();
-          });
+          dot.classList.toggle("active", i === currentIndex);
+        });
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel();
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+      }
+
+      if (nextBtn) nextBtn.addEventListener("click", nextSlide);
+      if (prevBtn) prevBtn.addEventListener("click", prevSlide);
+      dots.forEach((dot, i) => {
+        dot.addEventListener("click", () => {
+          currentIndex = i;
+          updateCarousel();
         });
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>
