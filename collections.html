@@ -112,11 +112,24 @@
       transform: scale(1.1);
     }
 
+    .carousel-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+
     .carousel-dots {
       display: flex;
       justify-content: center;
       gap: 0.5rem;
-      margin-top: 1rem;
+    }
+
+    .carousel-counter {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 500;
     }
 
     .carousel-dot {
@@ -417,6 +430,14 @@
           <h3>Poodle Puppy Training and Grooming Guide: For Toy, Miniature and Standard Poodle Dogs</h3>
           <p>Poodle Puppy Training and Grooming Guide: For Toy, Miniature and Standard Poodle Dogs: Positive Reinforcement Methods for House & Potty Training</p>
         </div>
+        <div class="carousel-slide">
+          <img src="imgs/books/shih-tzu.jpg" alt="Shih Tzu Puppy Training & Grooming Guide: All About Shih Tzu Dogs">
+          <h3>Shih Tzu Puppy Training & Grooming Guide: All About Shih Tzu Dogs</h3>
+          <p>Positive reinforcement methods for house & potty training, grooming, socialization, core commands & more. Perfect for Shih Tzus, Yorkies, Golden Retrievers, Bulldogs & more.</p>
+          <a href="https://mybook.to/D7TzQQ8" target="_blank" class="btn">Get Your Copy</a>
+        </div>
+      </div>
+      <div class="carousel-controls">
         <div class="carousel-dots">
           <button class="carousel-dot active"></button>
           <button class="carousel-dot"></button>
@@ -438,27 +459,9 @@
           <button class="carousel-dot"></button>
           <button class="carousel-dot"></button>
           <button class="carousel-dot"></button>
-        </div>
-          <button class="carousel-dot active"></button>
-          <button class="carousel-dot"></button>
-          <button class="carousel-dot"></button>
-          <button class="carousel-dot"></button>
-          <button class="carousel-dot"></button>
-          <button class="carousel-dot"></button>
-          <button class="carousel-dot"></button>
-          <button class="carousel-dot"></button>
-          <button class="carousel-dot"></button>
-          <button class="carousel-dot"></button>
-          <button class="carousel-dot"></button>
-          <button class="carousel-dot"></button>
-          <button class="carousel-dot"></button>
-          <button class="carousel-dot"></button>
-          <button class="carousel-dot"></button>
-          <button class="carousel-dot"></button>
-          <button class="carousel-dot"></button>
-          <button class="carousel-dot"></button>
           <button class="carousel-dot"></button>
         </div>
+        <span class="carousel-counter" id="carouselCounter">1 / 21</span>
       </div>
       <div class="carousel-nav">
         <button class="carousel-btn" id="prevBtn">&lsaquo;</button>
@@ -728,6 +731,17 @@
               Poodle Puppy Training and Grooming Guide: For Toy, Miniature and Standard Poodle Dogs: Positive Reinforcement Methods for House & Potty Training
             </td>
           </tr>
+          <tr>
+            <td data-label="Book">
+              <a href="https://mybook.to/D7TzQQ8" target="_blank" class="book-link">
+                <img src="imgs/books/shih-tzu.jpg" alt="Shih Tzu Puppy Training & Grooming Guide: All About Shih Tzu Dogs" class="book-cover">
+                <span class="book-title-link">Shih Tzu Puppy Training & Grooming Guide: All About Shih Tzu Dogs</span>
+              </a>
+            </td>
+            <td data-label="Description">
+              Positive reinforcement methods for house & potty training, grooming, socialization, core commands & more. Perfect for Shih Tzus, Yorkies, Golden Retrievers, Bulldogs & more.
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -750,6 +764,7 @@
       const track = document.querySelector(".carousel-track");
       const slides = document.querySelectorAll(".carousel-slide");
       const dots = document.querySelectorAll(".carousel-dot");
+      const counter = document.getElementById("carouselCounter");
       const prevBtn = document.getElementById("prevBtn");
       const nextBtn = document.getElementById("nextBtn");
       let currentIndex = 0;
@@ -760,6 +775,7 @@
         dots.forEach((dot, i) => {
           dot.classList.toggle("active", i === currentIndex);
         });
+        if (counter) counter.textContent = `${currentIndex + 1} / ${totalSlides}`;
       }
 
       function nextSlide() {
